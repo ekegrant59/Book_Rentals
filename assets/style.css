@@ -1,0 +1,46 @@
+*{
+    font-family: 'Comfortaa';
+    
+}
+
+.nav-link{
+    color: rgb(4, 88, 88);
+}
+
+.introimg{
+    margin-top: 40px;
+    background-image: url(../assets/images/Hero_2.jpg);
+    background-position: center;
+    background-size: cover;
+    height: auto;
+    padding: 100px 50px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (min-width : 680px){
+   
+}
+
+.login{
+    margin-top: 100px;
+    width: 40%;
+}
+
+main{
+    margin-top: 100px;
+}
+
+.book_heading{
+    color: rgb(4, 88, 88);
+}
+
+.logintorent{
+    text-decoration: underline;
+    color: rgb(4, 88, 88);
+}

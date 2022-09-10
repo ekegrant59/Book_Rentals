@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Rental</title>
+
+    <!-- importing Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@400;700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <!-- Css StyleSheet -->
+    <link rel="stylesheet" href="../assets/style.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="../assets/images/booklogo.png" type="png">
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <div class="heading">
+        <h2 class="text-center">Your No1 Source for Books!</h2>
+    </div>
+
+    <div class="introimg">
+        <p class="fs-1 fw-bold text-light">Save up to 90% on <br> textbooks</p>
+        <p class="fs-4 text-light">Rent or buy from our library of nearly 750,000 <br> low-cost books.</p>
+    </div>
+
+    <div class="row text-center g-5 m-2">
+        <div class="col">
+            <p class="fs-2 fw-bold">Rent your <br> textbooks</p>
+            <p class="fs-6">One semester of books should not cost <br> hundreds. Save up to 90% when you rent.</p>
+        </div>
+        <div class="col">
+            <p class="fs-2 fw-bold">Easy delivery, <br> easy returns</p>
+            <p class="fs-6">Take the stress out of changing books and <br> courses with 21-day refunds on returns.</p>
+        </div>
+        <div class="col">
+            <p class="fs-2 fw-bold">eBooks while <br> you wait</p>
+            <p class="fs-6">Get started ASAP with a free eBook you can <br> read while you wait for your textbook.</p>
+        </div>
+    </div>
+
+    <div class="category m-5 pt-5">
+        <h1 class="text-center fw-bold" style="color: rgb(4, 88, 88);">Shop By Category</h1>
+
+        <div class="row row text-center m-3 g-4">
+            <div class="col">
+                <a href="/books">
+                    <p class="mb-0 fs-4">Textbooks</p>
+                    <img src="../assets/images/textbook.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="/books#fiction">
+                    <p class="mb-0 fs-4">Fiction</p>
+                    <img src="../assets/images/fiction.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="/books#fiction">
+                    <p class="mb-0 fs-4">Romance</p>
+                    <img src="../assets/images/romance.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="/books">
+                    <p class="mb-0 fs-4">eBooks</p>
+                    <img src="../assets/images/ebooks.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="/books#cookbooks">
+                    <p class="mb-0 fs-4" >Cookbooks</p>
+                    <img src="../assets/images/cookbooks.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="/books#kids">
+                    <p class="mb-0 fs-4">Kids Books</p>
+                    <img src="../assets/images/kids.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="/books#crafts">
+                    <p class="mb-0 fs-4"> Crafts & Hobbies</p>
+                    <img src="../assets/images/crafts.jpeg" alt="">
+                </a>
+            </div>
+            <div class="col">
+                <a href="/books#mystery">
+                    <p class="mb-0 fs-4"> Mystery</p>
+                    <img src="../assets/images/mystery.jpeg" alt="">
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="about m-5 p-5 text-center">
+        <h1 class=" fw-bold mb-3" style="color: rgb(4, 88, 88);">About BookRentals</h1>
+        <p class="fs-4">Founded in 2022, BookRentals is your online store for renting various types of books ranging from school textbooks to fiction novels and also save money on rentals as our prices are relatively cheaper than other online rental platforms. Browse our expansive selection today to find what you need and make BookRentals your go-to for books online.</p>
+
+        <h1 class=" fw-bold mb-3 mt-5 pt-5" style="color: rgb(4, 88, 88);">Why Buy From Us?</h1>
+        <p class="fs-4">When you want to buy books, choose BookRentals for low prices, great selection, and online convenience. Thanks to a large collection of textbooks, novels, and other categories of reading materials, we make it easy to find just what you need. Our catalog includes over 15 million books for sale, all searchable by author, title, or ISBN. Plus, we offer free shipping on all orders over $35 and same-day shipping on any order placed before 2 p.m. Eastern Standard Time.</p>
+    </div>
+
+    <footer class="row text-center container-fluid mt-5 pt-5 mb-3">
+    
+        <div class="col">
+            <p class="" >FOLLOW US</p>
+            <div class="icons">
+                <a href="" class="mx-2"><i class="bi bi-twitter"></i></a>
+                <a href="" class="mx-2"><i class="bi bi-telegram"></i></a>
+                <a href="" class="mx-2"><i class="bi bi-instagram"></i></a>
+                <a href="" class="mx-2"><i class="bi bi-github"></i></a>
+            </div>
+        </div>
+        <div class="col align-self-center">
+            <p>&copy; 2022 BookRentals.</p>
+        </div>
+    </footer>
+
+    <script>
+        const loginbtn = document.querySelector('.loginbtn')
+        const registerbtn = document.querySelector('.registerbtn')
+
+        if (document.cookie != ''){
+            loginbtn.innerHTML = 'Hi! <%=username %>'
+            registerbtn.innerHTML = 'Your Profile'
+            registerbtn.setAttribute('href', '/profile')
+            loginbtn.setAttribute('href', '/profile')
+        }
+    </script>
+</body>
+</html>
