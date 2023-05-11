@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Book</title>
+    <%- include('partials/head-links') %>
+</head>
+<body>
+    <header class="d-flex align-items-center">
+        <h1 class="my-3 text-center mx-auto">Add New Book </h1>
+        <a href="/admin" class="btn btn-primary me-4">Back</a>
+    </header>
+    <hr>
+    <div class="container-fluid">
+        <div class="col-8 mx-auto">
+            <form action="/add" method="post">
+                <div >
+                    <%- messages('messages', locals) %> 
+                </div>
+                <div class="row mb-3">
+                    <label for="inputTitle" class="col-12 col-form-label mb-0">Title:</label>
+                    <div class="col-12">
+                        <input type="text" class="form-control" id="inputTitle" name="title" required>
+                    </div>           
+                </div>
+                <div class="row mb-3">
+                    <label for="inputAuthor" class="col-12 col-form-label mb-0">Author:</label>
+                    <div class="col-12">
+                        <input type="text" class="form-control" id="inputAuthor" name="author" required>
+                    </div>           
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label mb-0" for="inputCategory" >Category</label>
+                    <select class="form-select" id="inputCategory" name="category">
+                      <option selected>Select Category</option>
+                      <option value="Textbook">
+                        Textbook
+                      </option>
+                      <option value="Fiction">
+                        Fiction
+                      </option>
+                      <option value="cookbook">
+                        Cookbook
+                      </option>
+                      <option value="kidBooks">
+                        KidBook
+                      </option>
+                      <option value="crafts">
+                        Crafts
+                      </option>
+                      <option value="mystery">
+                        Mystery
+                      </option>
+                    </select>
+                </div>
+
+                <div class="row mb-3">
+                    <label for="ISBN" class="col-12 col-form-label mb-0">ISBN:</label>
+                    <div class="col-12">
+                        <input type="text" class="form-control" id="ISBN" name="ISBN" required>
+                    </div>           
+                </div>
+                
+                <div class="row mb-3">
+                  <label for="Image" class="col-12 col-form-label mb-0">Image:</label>
+                  <div class="col-12">
+                      <input type="text" class="form-control" id="Image" name="image" required placeholder="Insert Link to Image Here">
+                  </div>           
+               </div>
+
+                <div class="mb-4">
+                    <label class="form-label mb-0" for="inputStatus" >Status</label>
+                    <select class="form-select" id="inputStatus" name="status">
+                      <option selected value="Available">Available</option>
+                      <option value="Out of Stock">
+                        Out of Stock
+                      </option>
+                    </select>
+                </div>
+
+                <div class="my-3 text-center">
+                    <button class="btn btn-primary btn-lg" type="submit">Create Book</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

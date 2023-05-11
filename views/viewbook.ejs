@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= book.title %></title>
+    <%- include('partials/head-links') %>
+</head>
+<body>
+    <%- include('partials/navbar') %>
+    <h2 class="text-center mt-5 pt-5" style="color: rgb(1, 63, 63); font-weight: 900;"><%= book.title %></h2>
+    <div class="col-sm-7 col-10 mx-auto d-flex">
+        <div class="m-2"><img src="<%= book.img %>" alt="" class="img-fluid h-100 w-100"></div>
+        <div class="m-2">
+            <p class="fw-bold fs-sm-4 fs-5 mt-4">Author: <%= book.author %></p>
+            <p class="fw-bold fs-sm-5 fs-6">ISBN: <%= book.ISBN %></p>
+            <p class="status fw-bold fs-sm-5 fs-6 mb-2" ><%= book.status %> </p>
+            <form class=" form_6" action="/update" method="post">
+                <input type="text" name="title" value="<%= book.title %>" style="display: none;" >
+                <% if ( book.status  == 'Out of Stock') { %>
+                    <button type="button" class="btn btn-primary rent mb-3" disabled>RENT</button>
+                    
+                <% }else if(book.rentedBy == user){ %>
+                    <button type="button" class="btn btn-primary rent mb-3" disabled>RENTED</button>
+                <%} else{ %>
+                    <button type="submit" class="btn btn-primary rent mb-3 bookbtn">RENT</button>
+                <% } %> 
+            </form>
+            <p class="loginp">You need to <a href="/login" class="logintorent" >login</a> to rent a book</p>
+        </div>
+    </div>
+
+    <%- include('partials/footer') %>
+
+    <script>
+        const loginbtn = document.querySelector('.loginbtn')
+        const registerbtn = document.querySelector('.registerbtn')
+        const statusOf = document.querySelector('.status')
+        const rent = document.querySelector('.rent')
+        const loginp = document.querySelector('.loginp')
+        let name = '<%=username %>'
+        if (!(name == '')){
+            loginbtn.innerHTML = 'Hi! <%=username %>'
+            registerbtn.innerHTML = 'View Profile'
+            registerbtn.setAttribute('href', '/profile')
+            loginbtn.setAttribute('href', '/profile')
+
+            loginp.style.display = 'none'
+
+            if(statusOf.innerHTML == 'Available'){
+                rent.setAttribute('disabled', '')
+            }
+        } else{
+            rent.setAttribute('disabled', '')
+        }
+    </script>
+</body>
+</html>

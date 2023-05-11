@@ -23,13 +23,16 @@ a:hover{
     transform: scale(1.1);
 }
 
-@media screen and (min-width : 680px){
-   
+
+
+@media screen and (min-width : 480px){
+    .var-width{
+        width: 14rem;
+    }
 }
 
 .login{
     margin-top: 100px;
-    width: 40%;
 }
 
 main{

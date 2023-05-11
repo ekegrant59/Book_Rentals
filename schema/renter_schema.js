@@ -1,5 +1,5 @@
 const mongoose = require('mongoose')
-const mongodb = 'mongodb://localhost:27017/book_rental'
+const mongodb = 'mongodb+srv://ekegrant59:M1Uh1XZFtitD75nl@book-rentals.r2jlzqe.mongodb.net/book-rental'
 mongoose.connect(mongodb)
 
 const renter_schema = new mongoose.Schema({

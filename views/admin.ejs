@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Page</title>
+    <%- include('partials/head-links') %>
+</head>
+<body>
+    <header class="d-flex align-items-center">
+        <h1 class="text-center my-4 mx-auto">Admin Page</h1>
+        <a href="/addbook" class="btn btn-primary btn-sm me-sm-4 me-1">Add Book</a>
+        <a href="/adminlogout" class="btn btn-primary btn-sm me-sm-4 me-2">Logout</a>
+
+    </header>
+    <hr>
+
+    <div class="row mb-5 gy-5 container-fluid">
+        <% books.forEach(book => { %> 
+            <div class="col-sm col-6 mx-sm-3">
+                <div class="card var-width">
+                    <img src="<%= book.img %>" class="card-img-top" alt="..."  height="200px">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold"><%= book.title %> </h5>
+                        <p class="card-text"> By <%= book.author %> </p>
+                        <p>ISBN: <%= book.ISBN %> </p>
+                        <p >Category: <%= book.category %> </p>
+                        <div class="mb-3 d-flex align-items-end">
+                            <a class="btn btn-primary btn me-auto" href="/edit/<%= book.id %>"><i class="bi bi-pencil"></i></a>
+                            <a class="btn btn-primary btn ms-auto" href="/delete/<%= book.id %>"><i class="bi bi-trash3-fill"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       <% }) %> 
+    </div>
+</body>
+</html>
